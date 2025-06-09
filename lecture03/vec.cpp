@@ -29,6 +29,7 @@ public:
     }
 
     VecInt& operator=(const VecInt &other){
+        delete [] arr;
         arr_capacity = other.capacity();
         arr = new int [arr_capacity];
         arr_size = other.size();
